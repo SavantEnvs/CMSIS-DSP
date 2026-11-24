@@ -1,0 +1,9 @@
+project: savantenvs/CMSIS-DSP
+target: fuzz-support-window
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-support-window/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_support_window
+    libfuzzer: true
+    timeout: 10

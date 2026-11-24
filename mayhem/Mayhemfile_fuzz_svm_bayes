@@ -1,0 +1,9 @@
+project: savantenvs/CMSIS-DSP
+target: fuzz-svm-bayes
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-svm-bayes/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_svm_bayes
+    libfuzzer: true
+    timeout: 10

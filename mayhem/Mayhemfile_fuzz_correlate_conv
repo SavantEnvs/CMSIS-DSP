@@ -1,0 +1,9 @@
+project: savantenvs/CMSIS-DSP
+target: fuzz-correlate-conv
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-correlate-conv/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_correlate_conv
+    libfuzzer: true
+    timeout: 10

@@ -1,0 +1,9 @@
+project: savantenvs/CMSIS-DSP
+target: fuzz-fastmath-ctrl-quat
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-fastmath-ctrl-quat/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_fastmath_ctrl_quat
+    libfuzzer: true
+    timeout: 10

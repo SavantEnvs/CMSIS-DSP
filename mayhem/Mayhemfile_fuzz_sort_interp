@@ -1,0 +1,9 @@
+project: savantenvs/CMSIS-DSP
+target: fuzz-sort-interp
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-sort-interp/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_sort_interp
+    libfuzzer: true
+    timeout: 10

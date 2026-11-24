@@ -1,0 +1,9 @@
+project: savantenvs/CMSIS-DSP
+target: fuzz-mfcc
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-mfcc/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_mfcc
+    libfuzzer: true
+    timeout: 10

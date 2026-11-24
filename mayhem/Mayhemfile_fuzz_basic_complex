@@ -1,0 +1,9 @@
+project: savantenvs/CMSIS-DSP
+target: fuzz-basic-complex
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-basic-complex/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_basic_complex
+    libfuzzer: true
+    timeout: 10
